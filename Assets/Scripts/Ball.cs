@@ -19,6 +19,11 @@ public class Ball : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
+        {
             rb.AddForce(Vector3.forward * power);
+            AudioSource source = GetComponent<AudioSource>();
+            source.Play();
+        }
+            
     }
 }
